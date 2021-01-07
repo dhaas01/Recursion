@@ -1,1 +1,24 @@
 # Recursion
+package javaapplication4;
+
+public class JavaApplication4 {
+    public static void main(String[] args) {
+        numbers(1);
+    }
+    public static void numbers(int n) { 
+       int[] test = {1,2,3,4,5,6,7,8,9};
+       if (n==0) 
+       { 
+           return;
+       }
+       else 
+       { 
+          for (int i = 2; i < test.length; i+=3) 
+            { 
+                System.out.println(test[i]); 
+            }
+          n--;
+          numbers(n);
+       }
+    }
+}
